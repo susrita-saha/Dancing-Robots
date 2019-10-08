@@ -1,0 +1,41 @@
+*******************************************************************************************************************************************											
+													ROBOTICS PROJECT - DANCING ROBOTS
+
+********************************************************************************************************************************************
+
+Files :
+
+		Robotics_Project.pl
+		nxtbin.nxj
+		relay_server
+		platform.pl
+		nxt_interface.pl
+
+
+********************************************************************************************************************************************
+
+Steps for execution:
+
+		1. Open cmd and upload nxtbin.nxj to bot using nxjupload nxtbin.nxj.
+		2. execute nxtbin.nxj file on bot (select bluetooth mode).
+		3. cmd> nxjpc relay_server PORT 2
+		4. Open swipl and consult("platform.pl").
+		5. consult("nxt_interface.pl").
+		6. Make connection between robot and swipl platform using command- connect2_nxt(robo_name,localhost,PORT,_).
+		7. Consult Robotics_Project.pl file.
+		8. Call start(Port,Token) , start method consults platform.pl , starts tartarus platform on the Port passed and set token as Token.
+		* NOTE : Port used for creating relay agent in step 3 should not be same as Port used in start method for the robots.
+		9. Do steps 1 to 8 for all robots.
+		10.call combo(Port2,Token2,Port3,Token3) on only one tartarus platform (that plaform will create agents and clone them to other platforms) , where Port2 and Port3 are the ports of other two tartarus platforms , Token2 and Token3 are the the tokens of other two tartarus platforms.
+		
+
+********************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
